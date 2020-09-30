@@ -27,10 +27,10 @@ let s:nord6_gui = "#ECEFF4"
 let s:nord7_gui = "#8FBCBB"
 let s:nord8_gui = "#ff9e33"
 let s:nord9_gui = "#81A1C1"
-let s:nord10_gui = "#5E81AC"
+let s:nord10_gui = "#4F81AC"
 let s:nord11_gui = "#BF616A"
 let s:nord12_gui = "#D08770"
-let s:nord13_gui = "#EBCB8B"
+let s:nord13_gui = "#FFBB7B"
 let s:nord14_gui = "#a32f3d"
 let s:nord15_gui = "#e08e33"
 let s:nord16_gui = "#200000"
@@ -288,7 +288,7 @@ call s:hi("Include", s:nord9_gui, "", s:nord9_term, "", "", "")
 call s:hi("Keyword", s:nord9_gui, "", s:nord9_term, "", "", "")
 call s:hi("Label", s:nord9_gui, "", s:nord9_term, "", "", "")
 call s:hi("Number", s:nord17_gui, "", s:nord15_term, "", "", "")
-call s:hi("Operator", s:nord9_gui, "", s:nord9_term, "", "NONE", "")
+call s:hi("Operator", s:nord10_gui, "", s:nord10_term, "", "NONE", "")
 call s:hi("PreProc", s:nord9_gui, "", s:nord9_term, "", "NONE", "")
 call s:hi("Repeat", s:nord9_gui, "", s:nord9_term, "", "", "")
 call s:hi("Special", s:nord4_gui, "", "NONE", "", "", "")
@@ -300,7 +300,7 @@ call s:hi("String", s:nord14_gui, "", s:nord14_term, "", "", "")
 call s:hi("Structure", s:nord9_gui, "", s:nord9_term, "", "", "")
 call s:hi("Tag", s:nord4_gui, "", "", "", "", "")
 call s:hi("Todo", s:nord13_gui, "NONE", s:nord13_term, "NONE", "", "")
-call s:hi("Type", s:nord9_gui, "", s:nord9_term, "", "NONE", "")
+call s:hi("Type", s:nord13_gui, "", s:nord9_term, "", "NONE", "")
 call s:hi("Typedef", s:nord9_gui, "", s:nord9_term, "", "", "")
 hi! link Macro Define
 hi! link PreCondit PreProc
