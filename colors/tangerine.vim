@@ -35,6 +35,7 @@ let s:nord14_gui = "#ab1b5a"
 let s:nord15_gui = "#e08e33"
 let s:nord16_gui = "#200000"
 let s:nord17_gui = "#c02040"
+let s:nord18_gui = "#40E0E0"
 
 let s:nord1_term = "0"
 let s:nord3_term = "8"
@@ -172,7 +173,7 @@ call s:hi("Cursor", s:nord0_gui, s:nord4_gui, "", "NONE", "", "")
 call s:hi("CursorLine", "", s:nord16_gui, "NONE", s:nord1_term, "NONE", "")
 call s:hi("Error", s:nord16_gui, s:nord11_gui, "", s:nord11_term, "", "")
 call s:hi("iCursor", s:nord0_gui, s:nord4_gui, "", "NONE", "", "")
-call s:hi("LineNr", s:nord3_gui, "NONE", s:nord3_term, "NONE", "", "")
+call s:hi("LineNr", s:nord18_gui, "NONE", s:nord3_term, "NONE", "", "")
 call s:hi("MatchParen", s:nord8_gui, s:nord3_gui, s:nord8_term, s:nord3_term, "", "")
 call s:hi("NonText", s:nord2_gui, "", s:nord3_term, "", "", "")
 call s:hi("Normal", s:nord4_gui, "NONE", "NONE", "NONE", "", "")
@@ -219,7 +220,7 @@ if has('nvim')
 endif
 
 "+--- Gutter ---+
-call s:hi("CursorColumn", "", s:nord1_gui, "NONE", s:nord1_term, "", "")
+call s:hi("CursorColumn", s:nord0_gui, s:nord18_gui, "NONE", s:nord1_term, "", "")
 if g:nord_cursor_line_number_background == 0
   call s:hi("CursorLineNr", s:nord4_gui, "", "NONE", "", "NONE", "")
 else
