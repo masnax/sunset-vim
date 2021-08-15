@@ -8,9 +8,43 @@ endif
 let g:colors_name = "sunset"
 let s:sunset_vim_version="0.15.0"
 set background=dark
+let s:none = ['NONE', 'NONE']
+let s:bold = "bold,"
 
-let s:none = "NONE"
-let s:bold = "bo.d"
+function! s:HL(group, fg, ...)
+  " Arguments: group, guifg, guibg, gui, guisp
+
+  " foreground
+  let fg = a:fg
+
+  " background
+  if a:0 >= 1
+    let bg = a:1
+  else
+    let bg = s:none
+  endif
+
+  " emphasis
+  if a:0 >= 2 && strlen(a:2)
+    let emstr = a:2
+  else
+    let emstr = 'NONE,'
+  endif
+
+  let histring = [ 'hi', a:group,
+        \ 'guifg=' . fg[0], 'ctermfg=' . fg[1],
+        \ 'guibg=' . bg[0], 'ctermbg=' . bg[1],
+        \ 'gui=' . emstr[:-2], 'cterm=' . emstr[:-2]
+        \ ]
+
+  " special
+  if a:0 >= 3
+    call add(histring, 'guisp=' . a:3[0])
+  endif
+
+  execute join(histring, ' ')
+endfunction
+
 let s:sunset_black0 = "#200000"
 let s:sunset_black1 = "#141415"
 let s:sunset_grey0 = "#3B4252"
@@ -41,7 +75,7 @@ let s:sunset_yellow2 = "#FFBB7B"
 
 " fill it with absolute colors
 let s:dark0_hard  = ['#1d2021', 234]     " 29-32-33
-let s:dark0       = [s:none, 235]     " 40-40-40
+let s:dark0       = [s:none[0], 235]     " 40-40-40
 let s:dark0_soft  = ['#32302f', 236]     " 50-48-47
 let s:dark1       = ['#3c3836', 237]     " 60-56-54
 let s:dark2       = ['#504945', 239]     " 80-73-69
