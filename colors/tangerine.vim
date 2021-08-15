@@ -9,6 +9,125 @@ let g:colors_name = "sunset"
 let s:sunset_vim_version="0.15.0"
 set background=dark
 
+let s:none = "NONE"
+let s:bold = "bo.d"
+let s:sunset_black0 = "#200000"
+let s:sunset_black1 = "#141415"
+let s:sunset_grey0 = "#3B4252"
+let s:sunset_grey1 = "#434C5E"
+let s:sunset_grey2 = "#4C566A"
+let s:sunset_grey3 = "#616E88"
+let s:sunset_white0 = "#E5E9F0"
+let s:sunset_white1 = "#ECEFF4"
+let s:sunset_green0 = "#AFFFDF"
+let s:sunset_green1 = "#8FBCBB"
+let s:sunset_green2 = "#517777"
+let s:sunset_green3 = "#81A7A7"
+let s:sunset_blue0 = "#5FB1FF"
+let s:sunset_blue1 = "#4F81AC"
+let s:sunset_blue2 = "#1F418C"
+let s:sunset_blue3 = "#40E0E0"
+let s:sunset_purple0 = "#4F50A0"
+let s:sunset_purple1 = "#BF60D0"
+let s:sunset_red0 = "#ab1b5a"
+let s:sunset_red1 = "#c02040"
+let s:sunset_red2 = "#BF616A"
+let s:sunset_orange0 = "#F85E5E"
+let s:sunset_orange1 = "#FF7A0E"
+let s:sunset_orange2 = "#D08770"
+let s:sunset_yellow0 = "#e08e33"
+let s:sunset_yellow1 = "#F3A760"
+let s:sunset_yellow2 = "#FFBB7B"
+
+" fill it with absolute colors
+let s:dark0_hard  = ['#1d2021', 234]     " 29-32-33
+let s:dark0       = [s:none, 235]     " 40-40-40
+let s:dark0_soft  = ['#32302f', 236]     " 50-48-47
+let s:dark1       = ['#3c3836', 237]     " 60-56-54
+let s:dark2       = ['#504945', 239]     " 80-73-69
+let s:dark3       = ['#665c54', 241]     " 102-92-84
+let s:dark4       = [s:sunset_grey0, 243]     " 124-111-100
+let s:dark4_256   = [s:sunset_grey1, 243]     " 124-111-100
+
+let s:gray_245    = [s:sunset_grey3, 245]     " 146-131-116
+let s:gray_244    = [s:sunset_grey2, 244]     " 146-131-116
+
+let s:light0_hard = ['#f9f5d7', 230]     " 249-245-215
+let s:light0      = ['#fbf1c7', 229]     " 253-244-193
+let s:light0_soft = ['#f2e5bc', 228]     " 242-229-188
+let s:light1      = [s:sunset_orange0, 223]     " 235-219-178
+let s:light2      = ['#d5c4a1', 250]     " 213-196-161
+let s:light3      = ['#bdae93', 248]     " 189-174-147
+let s:light4      = ['#a89984', 246]     " 168-153-132
+let s:light4_256  = ['#a89984', 246]     " 168-153-132
+
+let s:bright_red     = [s:sunset_red1, 167]     " 251-73-52
+let s:bright_green   = [s:sunset_green0, 142]     " 184-187-38
+let s:bright_yellow  = [s:sunset_yellow2, 214]     " 250-189-47
+let s:bright_blue    = [s:sunset_blue0, 109]     " 131-165-152
+let s:bright_purple  = [s:sunset_purple1, 175]     " 211-134-155
+let s:bright_aqua    = [s:sunset_blue3, 108]     " 142-192-124
+let s:bright_orange  = [s:sunset_orange1, 208]     " 254-128-25
+
+let s:neutral_red    = [s:sunset_red0, 124]     " 204-36-29
+let s:neutral_green  = [s:sunset_green1, 106]     " 152-151-26
+let s:neutral_yellow = [s:sunset_yellow1, 172]     " 215-153-33
+let s:neutral_blue   = [s:sunset_blue1, 66]      " 69-133-136
+let s:neutral_purple = [s:sunset_purple0, 132]     " 177-98-134
+let s:neutral_aqua   = [s:sunset_blue3, 72]      " 104-157-106
+let s:neutral_orange = [s:sunset_orange0, 166]     " 214-93-14
+
+let s:dark_red      = [s:sunset_red2, 88]      " 157-0-6
+let s:dark_green    = [s:sunset_green2, 100]     " 121-116-14
+let s:dark_yellow   = [s:sunset_yellow0, 136]     " 181-118-20
+let s:dark_blue     = [s:sunset_blue2, 24]      " 7-102-120
+let s:dark_purple   = [s:sunset_black0, 96]      " 143-63-113
+let s:dark_aqua     = [s:sunset_blue3, 66]      " 66-123-88
+let s:dark_orange   = [s:sunset_orange2, 130]     " 175-58-3
+
+call s:HL('TangerineRed', s:neutral_red)
+call s:HL('TangerineBrightRed', s:bright_red)
+call s:HL('TangerineDarkRed', s:dark_red)
+call s:HL('TangerineRedBold', s:neutral_red, s:none, s:bold)
+call s:HL('TangerineBrightRedBold', s:bright_red, s:none, s:bold)
+call s:HL('TangerineDarkRedBold', s:dark_red, s:none, s:bold)
+call s:HL('TangerineGreen', s:neutral_green)
+call s:HL('TangerineBrightGreen', s:bright_green)
+call s:HL('TangerineDarkGreen', s:dark_green)
+call s:HL('TangerineGreenBold', s:neutral_green, s:none, s:bold)
+call s:HL('TangerineBrightGreenBold', s:bright_green, s:none, s:bold)
+call s:HL('TangerineDarkGreenBold', s:dark_green, s:none, s:bold)
+call s:HL('TangerineYellow', s:neutral_yellow)
+call s:HL('TangerineBrightYellow', s:bright_yellow)
+call s:HL('TangerineDarkYellow', s:dark_yellow)
+call s:HL('TangerineYellowBold', s:neutral_yellow, s:none, s:bold)
+call s:HL('TangerineBrightYellowBold', s:bright_yellow, s:none, s:bold)
+call s:HL('TangerineDarkYellowBold', s:dark_yellow, s:none, s:bold)
+call s:HL('TangerineBlue', s:neutral_blue)
+call s:HL('TangerineBrightBlue', s:bright_blue)
+call s:HL('TangerineDarkBlue', s:dark_blue)
+call s:HL('TangerineBlueBold', s:neutral_blue, s:none, s:bold)
+call s:HL('TangerineBrightBlueBold', s:bright_blue, s:none, s:bold)
+call s:HL('TangerineDarkBlueBold', s:dark_blue, s:none, s:bold)
+call s:HL('TangerinePurple', s:neutral_purple)
+call s:HL('TangerineBrightPurple', s:bright_purple)
+call s:HL('TangerineDarkPurple', s:dark_purple)
+call s:HL('TangerinePurpleBold', s:neutral_purple, s:none, s:bold)
+call s:HL('TangerineBrightPurpleBold', s:bright_purple, s:none, s:bold)
+call s:HL('TangerineDarkPurpleBold', s:dark_purple, s:none, s:bold)
+call s:HL('TangerineAqua', s:neutral_aqua)
+call s:HL('TangerineBrightAqua', s:bright_aqua)
+call s:HL('TangerineDarkAqua', s:dark_aqua)
+call s:HL('TangerineAquaBold', s:neutral_aqua, s:none, s:bold)
+call s:HL('TangerineBrightAquaBold', s:bright_aqua, s:none, s:bold)
+call s:HL('TangerineDarkAquaBold', s:dark_aqua, s:none, s:bold)
+call s:HL('TangerineOrange', s:neutral_orange)
+call s:HL('TangerineBrightOrange', s:bright_orange)
+call s:HL('TangerineDarkOrange', s:dark_orange)
+call s:HL('TangerineOrangeBold', s:neutral_orange, s:none, s:bold)
+call s:HL('TangerineBrightOrangeBold', s:bright_orange, s:none, s:bold)
+call s:HL('TangerineDarkOrangeBold', s:dark_orange, s:none, s:bold)
+
 let s:sunset0_gui = "#141415"
 let s:sunset1_gui = "#3B4252"
 let s:sunset2_gui = "#434C5E"
@@ -394,9 +513,6 @@ hi! link diffRemoved DiffDelete
 
 call s:hi("gitconfigVariable", s:sunset7_gui, "", s:sunset7_term, "", "", "")
 
-call s:hi("goBuiltins", s:sunset7_gui, "", s:sunset7_term, "", "", "")
-hi! link goConstants Keyword
-
 call s:hi("helpBar", s:sunset3_gui, "", s:sunset3_term, "", "", "")
 call s:hi("helpHyperTextJump", s:sunset8_gui, "", s:sunset8_term, "", s:underline, "")
 
@@ -764,3 +880,8 @@ hi! link VimwikiList markdownListMarker
 " YAML
 " > stephpy/vim-yaml
 call s:hi("yamlKey", s:sunset7_gui, "", s:sunset7_term, "", "", "")
+
+hi! link goBuiltins TangerineGreen
+
+hi! link goConstants Keyword
+
